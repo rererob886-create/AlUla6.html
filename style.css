@@ -1,89 +1,63 @@
+/* ====== الجسم الأساسي ====== */
 body {
     margin: 0;
     direction: rtl; /* نص من اليمين لليسار */
     background-color: #f5efe6; /* بيج فاتح */
     color: #5c3a21; /* بني داكن للنصوص */
-    font-family: 'Rakkas',Arial, Helvetica, sans-serif;
+    font-family: 'Rakkas', Arial, Helvetica, sans-serif;
 }
 
-/* 1️⃣ الفقرات */
+/* ====== الفقرات ====== */
 p {
     font-size: 20px;
-    color: #5c3a21;
     line-height: 1.8;
-    font-family : 'Playpen Sans Arabic',Arial, Helvetica, sans-serif;
+    color: #5c3a21;
+    font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
 }
 
-/* 2️⃣ العناوين h1 */
+/* ====== العناوين ====== */
 h1 {
     font-size: 60px;
-    color:#664828;
-    font-weight:50px;
-    text-shadow: 0 0 8px rgba(255,255,255,0.9);
+    color: #664828;
+    font-weight: 500;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
     text-align: center;
-font-family: 'Rakkas',Arial, Helvetica, sans-serif;
+    font-family: 'Rakkas', Arial, Helvetica, sans-serif;
 }
 
-.main-header h1 {
-font-family: 'Rakkas',Arial, Helvetica, sans-serif;
-  font-size: 80px;                  /* حجم الخط */
-  color: #8C6556        /* لون الخط */
-
-}
-
-
-/* 3️⃣ العناوين h2 */
 h2 {
     font-size: 35px;
     color: #8b6b4a;
     font-weight: 600;
     font-style: italic;
     margin-bottom: 25px;
- font-family: 'Rakkas',Arial, Helvetica, sans-serif;
+    font-family: 'Rakkas', Arial, Helvetica, sans-serif;
 }
 
-/* الهيدر */
+/* ====== محاذاة وسط إضافية ====== */
+.center-text {
+    text-align: center;
+}
+
+/* ====== الهيدر ====== */
 header {
     height: 200px;
-    background-image: url('https://images.unsplash.com/photo-1605559424843-9e4f93f4a0b5'); 
+    background-image: url('https://images.unsplash.com/photo-1605559424843-9e4f93f4a0b5');
     background-size: cover;
-  border: 8px double #8B5E3C;   /* إطار مزدوج بني */
-  border-radius: 50px;           /* زوايا دائرية */
-  padding: 25px;                 /* مساحة بين النص وحدود الرأس */
-  text-align: center;            /* النص في الوسط */
-  background-color: #fdf5e6;     /* خلفية فاتحة */
-  margin-left:50px;
-  margin-right:50px;
-  font-family: 'Rakkas',Arial, Helvetica, sans-serif;
- 
-  
-  
-  
+    border: 8px double #8B5E3C; /* إطار مزدوج بني */
+    border-radius: 50px;
+    padding: 25px;
+    text-align: center;
+    background-color: #fdf5e6;
+
+    /* مارجن كما في النسخة الأصلية */
+    margin-left: 50px;
+    margin-right: 50px;
+
+    font-family: 'Rakkas', Arial, Helvetica, sans-serif;
 }
 
-
-
-.header-overlay {
-    background-color: rgba(92, 58, 33, 0.6);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Rakkas',Arial, Helvetica, sans-serif;
-    
-    body {
-font-family: 'Rakkas',Arial, Helvetica, sans-serif;
-    direction: rtl;
-    background-color: #f5efe6;
-    color: #5c3a21;
-
-}
-
-/* تطبيق نفس الخط على العناوين والفقرات */
-h1, h2, p, footer {
-}
-}
-/* محتوى الصفحة */
+/* ====== الأقسام ====== */
 section {
     background-color: #fff8f0;
     margin: 5px auto;
@@ -92,19 +66,80 @@ section {
     width: 85%;
     box-shadow: 0 6px 10px rgba(92, 58, 33, 0.2);
     text-align: right;
-    img{border-radius: 50px;}
 }
-/* الفوتر */
+
+/* ====== حاوية الصور ====== */
+.photos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #f5efe6;
+}
+
+.photos-container img {
+    border: 10px solid #5c3a21; /* إطار بني داكن */
+    border-radius: 20px;
+    width: 280px;
+    height: auto;
+}
+
+/* ====== الفوتر ====== */
 footer {
     background-color: #9C7B51;
     text-align: center;
     padding: 18px;
     margin-top: 30px;
     color: #fff8f0;
-    font-family: 'Rakkas',Arial, Helvetica, sans-serif;}
-header h1 {
-    font-family: 'Rakkas', Arial, Helvetica, sans-serif !important;
+    font-family: 'Rakkas', Arial, Helvetica, sans-serif;
 }
 footer p {
     font-family: 'Rakkas', Arial, Helvetica, sans-serif !important;
+}
+
+/* ====== القائمة الهامبرغر ====== */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* ====== استجابة الجوال ====== */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(245, 239, 230, 0.95);
+        text-align: center;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
