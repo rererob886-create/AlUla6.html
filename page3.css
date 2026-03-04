@@ -12,6 +12,15 @@ header {
     padding: 20px;
 }
 
+header h1 {
+    font-family: 'Marhey', Arial, Helvetica, sans-serif !important;
+    background-color: #6b4f3b;  
+color: white;  
+margin: 20px auto; 
+text-align: center;
+    
+}
+
 .places {
     display: flex;
     justify-content: center;
@@ -26,56 +35,50 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.card img.active {
+    transform: scale(1.05);
+    filter: brightness(1.3) saturate(1.2) contrast(1.2);
 }
 
 .card h2 {
     margin: 15px 0 10px 0;
     color: #6b4f3b;
+    font-family: 'Marhey', Arial, Helvetica, sans-serif 
+    
 }
 
 .card p {
     padding: 0 15px 20px 15px;
     font-size: 14px;
     color: #333;
-}
-header h1 {
-    font-family: 'Marhey', Arial, Helvetica, sans-serif !important;
+font-family: 'Marhey', Arial, Helvetica, sans-serif 
 }
 
-/* للجوال */
 @media (max-width: 767px) {
-    body {
-        font-size: 14px;
-    }
+    body { font-size: 14px; }
+    .card { width: 90%; }
 }
 
-/* للتابلت */
 @media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        font-size: 16px;
-    }
+    body { font-size: 16px; }
 }
 
-/* للحاسب */
 @media (min-width: 1025px) {
-    body {
-        font-size: 18px;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 767px) {
-    nav ul {
-        flex-direction: column;
-    }
+    body { font-size: 18px; }
 }
