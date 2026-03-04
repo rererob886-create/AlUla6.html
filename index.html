@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>السعودية بعيون تقنية</title>
+    <title>السعودية بعيون تقنية | مدينة العُلا</title>
+    <meta name="description" content="اكتشف مدينة العُلا، جوهرة التاريخ في المملكة العربية السعودية، وأبرز معالمها السياحية والأثرية.">
+    <meta name="keywords" content="السعودية بعيون تقنية, العلا, مدينة العلا, سياحة السعودية, مدائن صالح, جبل الفيل">
+    <meta name="author" content="Reemas Faisal">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&family=Rakkas&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,8 +32,8 @@
 
 <main>
     <section id="about">
-        <h2 class="section-title">نبذة تعريفية</h2>
-        <p id="intro">
+        <h2 class="section-title center-text">نبذة تعريفية</h2>
+        <p id="intro" class="center-text">
             مدينة العُلا تقع في شمال غرب المملكة العربية السعودية، وتُعد من أقدم المدن التاريخية في شبه الجزيرة العربية.<br>
             تشتهر بمعالمها الأثرية مثل مدائن صالح المسجلة في قائمة التراث العالمي لليونسكو.<br>
             تتميز بطبيعتها الصحراوية الخلابة وتكويناتها الصخرية الفريدة مثل جبل الفيل.<br>
@@ -37,21 +41,21 @@
             واليوم أصبحت وجهة سياحية عالمية تجمع بين التراث العريق والتطوير الحديث ضمن رؤية المملكة 2030.<br><br>
             يوم بدينا… والعلا شاهدة على تاريخ وطننا العظيم.
         </p>
+        <button id="welcomeBtn">اضغط للترحيب بك في العُلا</button>
     </section>
 
     <section id="photos">
         <h2 class="section-title center-text">صور عن مدينة العُلا</h2>
         <div class="photos-container">
-            <img src="https://i.ibb.co/21FKY6zq/Picsart-26-02-14-17-49-57-368.jpg" alt="دليلك السياحي للعُلا">
-            <img src="https://i.ibb.co/MrZD9Qj/Picsart-26-02-14-17-50-45-069.jpg" alt="غروب صحراء العُلا">
-            <img src="https://i.ibb.co/7JsnY9hQ/file-00000000b0c8720cb82c118bdee58c30-edit-10422719611699.png" alt="يوم بدينا… والعلا تحكي تاريخ وطننا العريق.">
+            <img src="https://i.ibb.co/21FKY6zq/Picsart-26-02-14-17-49-57-368.jpg" alt="دليلك السياحي للعُلا" class="photo-effect">
+            <img src="https://i.ibb.co/MrZD9Qj/Picsart-26-02-14-17-50-45-069.jpg" alt="غروب صحراء العُلا" class="photo-effect">
+            <img src="https://i.ibb.co/7JsnY9hQ/file-00000000b0c8720cb82c118bdee58c30-edit-10422719611699.png" alt="يوم بدينا… والعلا تحكي تاريخ وطننا العريق." class="photo-effect">
         </div>
     </section>
 
     <section id="discover">
-        <h2 class="section-title center-text">اكتشف المزيد عن مدينة العُلا
-        </h2>
-        <h2 class="section-title"> يمكنك زيارة الصفحات التالية:</h2>
+        <h2 class="section-title center-text">اكتشف المزيد عن مدينة العُلا</h2>
+        <h2 class="section-title">يمكنك زيارة الصفحات التالية:</h2>
         <button onclick="window.open('page2.html','_self')">انتقل لصفحة مدينة العُلا 2</button>
         <a href="page2.html" class="center-text">اضغط هنا لمشاهدة تاريخ مدينة العُلا</a><br><br>
         <button onclick="window.open('page3.html','_self')">انتقل لصفحة مدينة العُلا 3</button>
@@ -63,14 +67,6 @@
     <p class="footer-text">Web Designer | Reemas Faisal 2/6</p>
 </footer>
 
-<script>
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('navLinks');
-
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); 
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
