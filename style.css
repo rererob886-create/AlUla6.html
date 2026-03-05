@@ -5,15 +5,18 @@ body {
     color: #5c3a21;
     font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
 }
-
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    justify-content: space-between;
+    padding: 15px 30px;
     background-color: #fff8f0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: fixed; /* هذا يجعل الشريط ثابت */
+    top: 0;          /* يثبت في أعلى الصفحة */
+    left: 0;
+    width: 100%;     /* ليغطي عرض الشاشة بالكامل */
+    z-index: 1000;   /* للتأكد أنه فوق كل العناصر الأخرى */
 }
 
 .logo {
