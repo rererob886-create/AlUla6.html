@@ -1,16 +1,20 @@
-const mobileMenu = document.getElementById("mobile-menu");
+const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-mobileMenu.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
 document.querySelectorAll("#navLinks a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
+    link.addEventListener("click", () => navLinks.classList.remove("active"));
 });
 
-document.getElementById("subscribe").onclick = function(){
-    alert("شكراً لاشتراكك في أخبار العلا");
-};
+const subscribeBtn = document.getElementById("subscribe");
+
+subscribeBtn.addEventListener("click", () => {
+    subscribeBtn.innerText = "تم الاشتراك ✅";
+    subscribeBtn.style.background = "#6b4f3b";
+    subscribeBtn.style.transform = "scale(1.2)";
+    setTimeout(()=> subscribeBtn.style.transform="scale(1)",300);
+    alert("شكراً لاشتراكك في أخبار العُلا!");
+});
