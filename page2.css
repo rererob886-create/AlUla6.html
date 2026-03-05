@@ -3,9 +3,10 @@ body {
     font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #fdf6f0, #f1e3d3);
     color: #4e342e;
+    direction: rtl;
 }
 
-/* الهامبرغر والقائمة */
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -42,12 +43,14 @@ body {
     color: #d18b00;
 }
 
-/* الهامبرغر في الهاتف */
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
+    position: relative;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -78,6 +81,7 @@ header p {
     margin-top: 15px;
 }
 
+/* Sections */
 .container {
     width: 85%;
     margin: 60px auto;
@@ -97,16 +101,14 @@ section h2 {
     border-right: 6px solid #d7ccc8;
     padding-right: 12px;
     font-family: 'Marhey', Arial, Helvetica, sans-serif;
-    
-    
 }
-
 
 section p {
     font-size: 18px;
     line-height: 1.9;
 }
 
+/* Gallery */
 .gallery-section {
     margin: 80px auto;
     padding: 50px 30px;
@@ -120,6 +122,7 @@ section p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    justify-items: center;
 }
 
 .gallery-item {
@@ -148,6 +151,36 @@ section p {
     transform: scale(1.05);
 }
 
+/* Buttons */
+.button-area {
+    text-align: center;
+    margin: 40px;
+}
+
+.pulse-btn {
+    padding: 14px 35px;
+    font-size: 18px;
+    background: #9C7B51;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.pulse-btn:hover {
+    transform: scale(1.1);
+    background: #6b4f3b;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(156,123,81,0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(156,123,81,0); }
+    100% { box-shadow:0 0 0 0 rgba(156,123,81,0); }
+}
+
+/* Footer */
 footer {
     background-color: #9C7B51;
     text-align: center;
@@ -170,27 +203,6 @@ footer {
         padding: 20px 0;
         text-align: center;
         gap: 15px;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .hamburger {
-        display: flex;
-    }
-}
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background-color: rgba(245,239,230,0.95);
-        text-align: center;
-        padding: 20px 0;
-        gap: 15px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         margin: 0;
     }
 
@@ -200,8 +212,5 @@ footer {
 
     .hamburger {
         display: flex;
-        position: absolute;
-        top: 15px;
-        right: 20px;
     }
 }
