@@ -4,7 +4,7 @@ body {
     background-color: #f5efe6;
     color: #5c3a21;
     font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
-    padding-top: 120px; /* مساحة للهيدر + الشريط */
+    padding-top: 90px; /* ارتفاع الشريط + فراغ إضافي ليظهر العنوان */
 }
 
 .navbar {
@@ -42,7 +42,9 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links li a:hover { color:#d18b00; }
+.nav-links li a:hover {
+    color: #d18b00;
+}
 
 .hamburger {
     display: none;
@@ -58,17 +60,20 @@ body {
     border-radius: 3px;
 }
 
-/* الهيدر */
+.top-space {
+    height: 20px; /* فراغ بين الشريط والهيدر */
+    background-color: #f5efe6;
+}
+
 header {
     background-image: url('https://images.unsplash.com/photo-1605559424843-9e4f93f4a0b5');
     background-size: cover;
     background-position: center;
     border: 8px double #8B5E3C;
     border-radius: 50px;
-    padding: 150px 25px 50px 25px; /* زيادة padding-top لتجنب التغطية */
+    padding: 50px 25px; /* زيادة padding لتظهر العناوين بالكامل */
     text-align: center;
     margin: 0 50px;
-    box-sizing: border-box;
 }
 
 .main-title {
@@ -78,7 +83,6 @@ header {
     text-shadow: 0 0 8px rgba(255,255,255,0.9);
 }
 
-/* العناوين الفرعية */
 .section-title {
     font-family: 'Rakkas', Arial, Helvetica, sans-serif;
     font-size: 35px;
@@ -162,4 +166,35 @@ footer {
     }
     .nav-links.active { display:flex; }
     .hamburger { display:flex; }
+}
+
+.toast-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    background-color: #9C7B51;
+    color: #fff8f0;
+    font-family: 'Marhey', Arial, Helvetica, sans-serif;
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10000;
+    transition: all 0.5s ease;
+    font-size: 18px;
+    text-align: center;
+    animation: glow 1.5s infinite alternate;
+}
+
+.toast-message.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(156,123,81,0.5); }
+    50% { box-shadow: 0 0 15px rgba(255,255,255,0.6), 0 0 25px rgba(156,123,81,0.7); }
+    100% { box-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(156,123,81,0.5); }
 }
