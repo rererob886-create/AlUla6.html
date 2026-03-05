@@ -1,7 +1,7 @@
-const mobileMenu = document.getElementById("mobile-menu");
+const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-mobileMenu.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
@@ -11,6 +11,11 @@ document.querySelectorAll("#navLinks a").forEach(link => {
     });
 });
 
+const historyBtn = document.getElementById("historyBtn");
+historyBtn.addEventListener("click", () => {
+    alert("شكراً لاهتمامك بتاريخ العُلا! استمر في اكتشاف المزيد.");
+});
+
 const galleryItems = document.querySelectorAll('.gallery-item img');
 
 galleryItems.forEach(img => {
@@ -18,7 +23,6 @@ galleryItems.forEach(img => {
         img.style.transform = 'scale(1.1) rotate(-1deg)';
         img.style.boxShadow = '0 15px 25px rgba(0,0,0,0.35)';
     });
-
     img.addEventListener('mouseleave', () => {
         img.style.transform = 'scale(1) rotate(0deg)';
         img.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)';
