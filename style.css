@@ -4,6 +4,8 @@ body {
     background-color: #f5efe6;
     color: #5c3a21;
     font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
+    padding-top: 70px; /* 70px تقريبًا ارتفاع الشريط */
+    
 }
 .navbar {
     display: flex;
