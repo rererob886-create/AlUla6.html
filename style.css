@@ -4,9 +4,9 @@ body {
     background-color: #f5efe6;
     color: #5c3a21;
     font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
-    padding-top: 70px; /* 70px تقريبًا ارتفاع الشريط */
-    
+    padding-top: 120px; /* ارتفاع الشريط + مساحة الهيدر */
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -14,11 +14,11 @@ body {
     padding: 15px 30px;
     background-color: #fff8f0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: fixed; /* هذا يجعل الشريط ثابت */
-    top: 0;          /* يثبت في أعلى الصفحة */
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;     /* ليغطي عرض الشاشة بالكامل */
-    z-index: 1000;   /* للتأكد أنه فوق كل العناصر الأخرى */
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -42,9 +42,7 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-    color: #d18b00;
-}
+.nav-links li a:hover { color:#d18b00; }
 
 .hamburger {
     display: none;
@@ -60,18 +58,12 @@ body {
     border-radius: 3px;
 }
 
-.top-space {
-    height: 30px;
-    background-color: #f5efe6;
-}
-
 header {
-    height: 200px;
     background-image: url('https://images.unsplash.com/photo-1605559424843-9e4f93f4a0b5');
     background-size: cover;
     border: 8px double #8B5E3C;
     border-radius: 50px;
-    padding: 25px;
+    padding: 100px 25px 50px 25px; /* padding-top أكبر لتجنب تغطية الشريط */
     text-align: center;
     margin: 0 50px;
 }
@@ -194,13 +186,7 @@ footer {
 }
 
 @keyframes glow {
-    0% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(156,123,81,0.5);
-    }
-    50% {
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(156,123,81,0.7);
-    }
-    100% {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(156,123,81,0.5);
-    }
+    0% { box-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(156,123,81,0.5); }
+    50% { box-shadow: 0 0 15px rgba(255,255,255,0.6), 0 0 25px rgba(156,123,81,0.7); }
+    100% { box-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(156,123,81,0.5); }
 }
