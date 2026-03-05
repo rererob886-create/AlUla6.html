@@ -1,20 +1,63 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Amiri', serif;
+    font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #fdf6f0, #f1e3d3);
     color: #4e342e;
 }
 
-.top-header {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    padding: 15px;
-    background: linear-gradient(45deg,#f0a500,#d18b00);
-    color: white;
+/* الهامبرغر والقائمة */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #fff8f0;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.logo {
+    font-family: 'Rakkas', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    color: #6b4f3b;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #6b4f3b;
+    font-family: 'Marhey', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #d18b00;
+}
+
+/* الهامبرغر في الهاتف */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #6b4f3b;
+    border-radius: 3px;
+}
+
+/* Header */
 header {
     background: linear-gradient(135deg, #6d4c41, #a1887f);
     color: white;
@@ -25,9 +68,9 @@ header {
 }
 
 header h1 {
+    font-family: 'Marhey', Arial, Helvetica, sans-serif !important;
     font-size: 44px;
     margin: 0;
-    font-family: 'Marhey', Arial, Helvetica, sans-serif !important;
 }
 
 header p {
@@ -54,7 +97,10 @@ section h2 {
     border-right: 6px solid #d7ccc8;
     padding-right: 12px;
     font-family: 'Marhey', Arial, Helvetica, sans-serif;
+    
+    
 }
+
 
 section p {
     font-size: 18px;
@@ -111,43 +157,24 @@ footer {
     font-family: 'Rakkas', Arial, Helvetica, sans-serif !important;
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    z-index: 1000;
-}
-
-@media (max-width:768px) {
-    .nav-list {
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 0;
+        left: 0;
         width: 100%;
         background-color: rgba(245,239,230,0.95);
-        text-align: center;
         padding: 20px 0;
+        text-align: center;
         gap: 15px;
     }
-    .nav-list.active { display:flex; }
-    .menu-toggle { display:block; }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
 }
