@@ -4,21 +4,16 @@ body {
     background-color: #f5efe6;
     color: #5c3a21;
     font-family: 'Playpen Sans Arabic', Arial, Helvetica, sans-serif;
-    padding-top: 90px; /* ارتفاع الشريط + فراغ إضافي ليظهر العنوان */
 }
 
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 15px 30px;
+    align-items: center;
+    padding: 15px 50px;
     background-color: #fff8f0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    position: relative;
 }
 
 .logo {
@@ -61,17 +56,17 @@ body {
 }
 
 .top-space {
-    height: 20px; /* فراغ بين الشريط والهيدر */
+    height: 30px;
     background-color: #f5efe6;
 }
 
 header {
+    height: 200px;
     background-image: url('https://images.unsplash.com/photo-1605559424843-9e4f93f4a0b5');
     background-size: cover;
-    background-position: center;
     border: 8px double #8B5E3C;
     border-radius: 50px;
-    padding: 50px 25px; /* زيادة padding لتظهر العناوين بالكامل */
+    padding: 25px;
     text-align: center;
     margin: 0 50px;
 }
@@ -194,7 +189,13 @@ footer {
 }
 
 @keyframes glow {
-    0% { box-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(156,123,81,0.5); }
-    50% { box-shadow: 0 0 15px rgba(255,255,255,0.6), 0 0 25px rgba(156,123,81,0.7); }
-    100% { box-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(156,123,81,0.5); }
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(156,123,81,0.5);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(156,123,81,0.7);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(156,123,81,0.5);
+    }
 }
