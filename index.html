@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>السعودية بعيون تقنية | مدينة العُلا</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السعودية بعيون تقنية | مدينة العُلا</title>
+    <meta name="description" content="اكتشف مدينة العُلا جوهرة التاريخ في المملكة العربية السعودية، وأبرز معالمها السياحية والأثرية.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Marhey:wght@300..700&family=Playpen+Sans+Arabic&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="top-header">العُلا جوهرة المملكة</div>
-
-<nav>
-    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-    <ul class="nav-list" id="navLinks">
+<!-- الهامبرغر والقائمة -->
+<nav class="navbar">
+    <div class="logo">العُلا جوهرة المملكة</div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
         <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="news.html">الأخبار</a></li>
         <li><a href="page2.html">تاريخ العُلا</a></li>
         <li><a href="page3.html">الوجهات السياحية</a></li>
+        <li><a href="news.html">الأخبار</a></li>
     </ul>
 </nav>
 
+<!-- فراغ بين العنوان العلوي والهيدر -->
+<div class="top-space"></div>
+
+<!-- الهيدر الرئيسي -->
 <header>
-    <div class="header">
-        <h1 class="main-title">مدينة العُلا</h1>
-    </div>
+    <h1 class="main-title">مدينة العُلا</h1>
 </header>
 
 <main>
@@ -34,8 +39,10 @@
         <h2 class="section-title center-text">نبذة تعريفية</h2>
         <p id="intro" class="center-text">
             مدينة العُلا تقع في شمال غرب المملكة العربية السعودية، وتُعد من أقدم المدن التاريخية في شبه الجزيرة العربية.<br>
-            تشتهر بمعالمها الأثرية مثل مدائن صالح.<br>
-            تتميز بطبيعتها الصحراوية وتكويناتها الفريدة مثل جبل الفيل.<br>
+            تشتهر بمعالمها الأثرية مثل مدائن صالح المسجلة في قائمة التراث العالمي لليونسكو.<br>
+            تتميز بطبيعتها الصحراوية الخلابة وتكويناتها الصخرية الفريدة مثل جبل الفيل.<br>
+            كانت العُلا محطة تجارية مهمة عبر العصور وموطناً للعديد من الحضارات القديمة.<br>
+            واليوم أصبحت وجهة سياحية عالمية تجمع بين التراث العريق والتطوير الحديث ضمن رؤية المملكة 2030.<br><br>
             يوم بدينا… والعلا شاهدة على تاريخ وطننا العظيم.
         </p>
         <button id="welcomeBtn">اضغط للترحيب بك في العُلا</button>
